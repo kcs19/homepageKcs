@@ -1,0 +1,148 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0px;
+  color: #000;
+}
+
+#top_nav {
+  height: 36px;
+  text-align: center;
+  border-bottom: 2px solid #e5e5e5;
+}
+#top_nav > section {
+  width: 980px;
+  padding-top: 5px;
+  display: inline-block;
+}
+#top_nav > section > ul > li {
+  float: left;
+  padding: 0 10px 0 10px;
+  border-right: 1px solid #e5e5e5;
+}
+#top_nav > section > ul > :last-child {
+  border-right: none;
+}
+#top_nav > section > ul > li > a {
+  font-size: 13px;
+}
+#top_nav_left {
+  float: left;
+  padding: 0;
+}
+#top_nav_right {
+  float: right;
+}
+
+#head {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+#head > ul {
+  display: inline-block;
+  height: 30px;
+}
+#head > ul > li {
+  float: left;
+  padding: 0 35px 0 35px;
+}
+#head > ul > li > a {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#main_view {
+  text-align: center;
+  position: relative;
+  width: 1294px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+}
+#main_view_pic > a > span {
+  font-size: 0px;
+  width: 1264px;
+}
+#main_view_pic > #left_button {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  width: 22px;
+  height: 50px;
+  background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png)
+    no-repeat 0 -153px;
+}
+#main_view_pic > #right_button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 22px;
+  height: 50px;
+  background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png)
+    no-repeat 0 -97px;
+}
+#menu_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+}
+#menu_button > #point_button {
+  margin: 0;
+  padding: 0;
+}
+#menu_button > #point_button > a {
+  background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png)
+    no-repeat;
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+}
+#menu_button > #point_button > a > span {
+  font-size: 0px;
+}
+#stop {
+  background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png)
+    no-repeat 0 -28px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+#stop > span {
+  font-size: 0px;
+}
+
+#benefit {
+  background-color: white;
+  height: 149px;
+  margin: -75px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#benefit_inner {
+  height: 69px;
+  width: 700px;
+  border-bottom: 2px solid black;
+  padding: 40px 0px 0px 0px;
+  display: inline-block;
+  position: relative;
+}
+#benefit_inner > h3 {
+  float: left;
+  margin-left: 0px;
+}
+#benefit_inner > a {
+  background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png)
+    no-repeat 0 -28px;
+  display: inline-block;
+  width: 30px;
+  margin-left: 560px;
+}
+#benefit_inner > a > span {
+  font-size: 0px;
+}
