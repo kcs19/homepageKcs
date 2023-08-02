@@ -54,12 +54,10 @@ dt {
 
 #save_id {
   margin-top: 20px;
-  padding-bottom: 60px;
-  font-size: 14px;
   line-height: 35px;
   letter-spacing: -2px;
   color: #6e6e6e;
-  border-bottom: 2px solid #f2f2f2;
+  font-size: 14px;
 }
 #save_id > label {
   padding: 0 20px 0 0;
@@ -72,6 +70,17 @@ dt {
 #save_id > a {
   padding-left: 5px;
   color: #6e6e6e;
+}
+#login_false {
+  color: #6e6e6e;
+  font-size: 13px;
+  border-bottom: 2px solid #f2f2f2;
+  padding-top: 30px;
+  letter-spacing: -2px;
+  color: rgb(185, 65, 65);
+}
+#login_false :first-child {
+  font-weight: bolder;
 }
 
 #join_recommed {
@@ -92,4 +101,5 @@ dt {
   padding: 8px 18px 8px 18px;
   border: 1px solid black;
   color: black;
+  background-color: white;
 }
