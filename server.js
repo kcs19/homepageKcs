@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json()); //미들웨어 필요!!!!
 
 const db = require('./models/index');
-const { Member } = db;
+const { Client } = db;
 
 // const { sequelize } = require('./models/index');
 
@@ -23,6 +23,26 @@ const users = {
     id: ["qwer"],
     pw: ["1234"],
 };
+
+app.get('/client', async (request, response) => {
+    console.log(await Client.findAll());
+});
+
+app.post('/join', async (request, response) => {
+    console.log(request.body);
+    console.log("회원가입");
+    const newClient = request.body;
+    const client = await Client.create({ //build , save시 id값이 자동으로 들어가지 않음
+        name: newClient.id,
+        email: "ccc@gmail.com",
+        password: newClient.pw,
+        birthday: "2000-10-10",
+        phoneNumber: "010-0000-1234",
+        profileImage: "good",
+    });
+    console.log(client);
+    response.send(client);
+});
 
 app.post('/login', async (request, response) => {
     console.log(request.body);
