@@ -6,7 +6,7 @@ for (const login_input of login_inputs) {
     login_input.addEventListener('mouseout', function (e) {
         login_input.setAttribute('class', 'login_input');
     });
-}
+}// 아이디 밑줄
 
 const login_btn = document.querySelector('#login_btn');
 login_btn.addEventListener('click', function (e) {
@@ -15,7 +15,8 @@ login_btn.addEventListener('click', function (e) {
 
 const join_btn = document.querySelector('#join_btn');
 join_btn.addEventListener('click', function (e) {
-    //DOM - html 데이터 처리 제어 도와줌 -> 공부
+    //DOM - html 데이터 처리 제어 도와줌 
+    //브라우저에서 제공하는 위도우 객체 중 하나
     const id_input = document.querySelector('#id_input');
     const pw_input = document.querySelector('#password');
     const req = {
@@ -29,6 +30,12 @@ join_btn.addEventListener('click', function (e) {
         headers: {
             "Content-Type": "application/json", //데이터 타입
         },
-        body: JSON.stringify(req),
+        body: JSON.stringify(req), //스크립트 객체를 string타입 json형식으로
     })
+        .then((response) => response.json())
+        .then((result) => {
+            console.log(result);
+            console.log(result.message);
+        })
+        .catch((error) => console.log(error));
 });
