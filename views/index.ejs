@@ -10,39 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
   <body>
-    <nav id="top_nav">
-      <section>
-        <ul id="top_nav_left">
-          <li><a href="#">PEACOOK</a></li>
-          <li><a href="https://emart.ssg.com/?ckwhere=emart">이마트 몰</a></li>
-          <li><a href="https://www.shinsegaepoint.com/">신세계 포인트</a></li>
-          <li><a href="https://www.cultureclub.emart.com/">문화센터</a></li>
-        </ul>
-        <ul id="top_nav_right">
-          <li>
-            <a href="#">My이마트</a>
-          </li>
-          <li>
-            <a href="https://store.emart.com/music/main.do">이마트 뮤직</a>
-          </li>
-          <li>
-            <a href="https://store.emart.com/emartTV/eTVcontentsMain.do"
-              >이마트 TV</a
-            >
-          </li>
-          <li><a href="#" id="main_login">로그인</a></li>
-          <li>
-            <a
-              href="https://member.shinsegaepoint.com/emart/emartApp/member/join/cert"
-              >회원가입</a
-            >
-          </li>
-        </ul>
-      </section>
-    </nav>
+    <%- include('./header.ejs') %>
+
     <section id="head">
       <ul>
         <li><a>점포찾기</a></li>
@@ -87,6 +59,6 @@
         <a><span>스탑</span></a>
       </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

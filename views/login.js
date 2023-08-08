@@ -10,7 +10,6 @@ for (const login_input of login_inputs) {
 
 const join_btn = document.querySelector('#join_btn');
 join_btn.addEventListener('click', function (e) {
-    alert("gkdl");
     const id_input = document.querySelector("#id_input");
     const pw_input = document.querySelector("#password");
     const req = {
@@ -27,7 +26,14 @@ join_btn.addEventListener('click', function (e) {
         body: JSON.stringify(req),
     })
         .then((response) => response.json())
-        .then((result) => console.log(result));
+        .then((result) => {
+            console.log(result);
+            if (result.client) {
+                alert("회원가입 되었습니다.");
+            } else {
+                alert(result.message);
+            }
+        });
 
 });
 
@@ -56,9 +62,7 @@ login_btn.addEventListener('click', function (e) {
             const login_false = document.querySelector('#login_false');
             if (result.success) {
                 alert("로그인 되었습니다");
-                login_false.style.visibility = "hidden";
-
-
+                window.close();
             } else {
                 login_false.style.visibility = "visible";
             }
