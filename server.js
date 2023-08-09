@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json()); //미들웨어 필요!!!!
 app.set('view engine', 'ejs');
 app.set('views', './views'); //화면에 보여지는 폴더 views로 지정
-app.use(express.static("./views"));
+app.use(express.static(__dirname + '/public')); //정적 라우팅, css또는 이미지 위치 (현재 서버파일 위치의 /public 폴더에 존재)
 
 app.get('/', (req, res) => {
     res.render('index'); //   ./views/index.ejs를 불러와서 출력
@@ -31,6 +31,11 @@ const { Client } = db;
 app.get('/clientDestory', async (request, response) => {
     await Client.destroy({ where: {} }); //전체삭제
     response.send(await Client.findAll());
+    // const query = 'ALTER TABLE your_table AUTO_INCREMENT = 1;';
+    // Client.query(query, (error, result) => {
+    //     if (error) throw error;
+    //     console.log('AUTO_INCREMENT 값 변경 완료');
+    // })
 });
 
 app.get('/client', async (request, response) => {

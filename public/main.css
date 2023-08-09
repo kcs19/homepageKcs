@@ -37,21 +37,28 @@
 }
 
 #head {
+  height: 30px;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 35px;
 }
 #head > ul {
+  width: 980px;
   display: inline-block;
-  height: 30px;
+  text-align: center;
+  padding-left: 20%;
 }
 #head > ul > li {
   float: left;
   padding: 0 35px 0 35px;
 }
-#head > ul > li > a {
+#head > ul > li > a > span {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
+}
+.mouseover {
+  border: 0;
+  border-bottom: 2px solid black;
 }
 
 #main_view {
