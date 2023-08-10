@@ -6,6 +6,9 @@
   margin: 0px;
   color: #000;
 }
+body {
+  height: 0;
+}
 
 #top_nav {
   height: 36px;
@@ -108,6 +111,10 @@
   height: 7px;
   display: inline-block;
 }
+#menu_button > #point_button > .select_point {
+  background-position: 0 -12px;
+}
+
 #menu_button > #point_button > a > span {
   font-size: 0px;
 }
@@ -122,13 +129,16 @@
   font-size: 0px;
 }
 
+#show_pic > a > img:not(.show) {
+  display: none;
+}
+
 #benefit {
   background-color: white;
   height: 149px;
   margin: -75px;
   width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 250px;
   text-align: center;
 }
 #benefit_inner {
@@ -142,14 +152,36 @@
 #benefit_inner > h3 {
   float: left;
   margin-left: 0px;
+  margin-right: 0px;
 }
 #benefit_inner > a {
   background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png)
     no-repeat 0 -28px;
   display: inline-block;
+  height: 30px;
   width: 30px;
-  margin-left: 560px;
+  right: 0px;
+  top: 40px;
+  position: absolute;
 }
 #benefit_inner > a > span {
   font-size: 0px;
+  float: left;
+}
+#benefit_inner > ul {
+  left: 150px;
+  display: block;
+  overflow: hidden;
+  width: 450px;
+  height: 28px;
+  position: absolute;
+}
+#slide {
+  float: left;
+  width: 10000px;
+  position: absolute;
+}
+#slide > li {
+  float: left;
+  margin-right: 50px;
 }
