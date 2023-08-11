@@ -94,3 +94,7 @@ function slide() {
     // }
 }
 setInterval(slide, 100);
+
+
+const loadedName = sessionStorage.getItem("name");
+console.log(JSON.parse(loadedName));

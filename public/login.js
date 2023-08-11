@@ -8,34 +8,6 @@ for (const login_input of login_inputs) {
     });
 }// 아이디 밑줄
 
-const join_btn = document.querySelector('#join_btn');
-join_btn.addEventListener('click', function (e) {
-    const id_input = document.querySelector("#id_input");
-    const pw_input = document.querySelector("#password");
-    const req = {
-        id: id_input.value,
-        pw: pw_input.value,
-    };
-    console.log(req);
-
-    fetch('http://localhost:3000/join', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(req),
-    })
-        .then((response) => response.json())
-        .then((result) => {
-            console.log(result);
-            if (result.client) {
-                alert("회원가입 되었습니다.");
-            } else {
-                alert(result.message);
-            }
-        });
-
-});
 
 const login_btn = document.querySelector('#login_btn');
 login_btn.addEventListener('click', function (e) {
@@ -62,10 +34,21 @@ login_btn.addEventListener('click', function (e) {
             const login_false = document.querySelector('#login_false');
             if (result.success) {
                 alert("로그인 되었습니다");
-                window.close();
+                const isCloesd = window.close();
+                if (isCloesd)
+                    console.log("d");
+                else {
+                    sessionStorage.setItem('userId', JSON.stringify(id_input.value));
+                    window.location.href = '/';
+                }
             } else {
                 login_false.style.visibility = "visible";
             }
         })
         .catch((error) => console.log(error));
+});
+
+const join_btn = document.querySelector('#join_btn');
+join_btn.addEventListener('click', function () {
+    window.location.href = '/register'; //get호출
 });

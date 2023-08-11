@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
     res.render('index'); //   ./views/index.ejs를 불러와서 출력
 });
 
+app.get('/register', (req, res) => {
+    res.render('register'); //   ./views/index.ejs를 불러와서 출력
+});
+
 const db = require('./models/index');
 const { exit } = require('process');
 const { Client } = db;
