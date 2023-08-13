@@ -18,6 +18,16 @@ myEmartBtn.addEventListener('click', function () {
     }
 });
 
+const loadName = sessionStorage.getItem("userId");
+if (JSON.parse(loadName) != null) {
+    console.log(JSON.parse(loadName));
+    const main_id = document.getElementById("main_login");
+    main_id.innerText = JSON.parse(loadName) + "님 환영합니다!";
+    let top_nav_right = document.querySelector('#top_nav_right')
+    top_nav_right.lastElementChild.innerHTML = 로그아웃;
+}
+
+
 const login_inputs = document.querySelectorAll('#head > ul > li > a > span');
 for (const login_input of login_inputs) {
     login_input.addEventListener('mouseover', function (e) {
@@ -96,5 +106,3 @@ function slide() {
 setInterval(slide, 100);
 
 
-const loadedName = sessionStorage.getItem("name");
-console.log(JSON.parse(loadedName));
