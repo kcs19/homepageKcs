@@ -9,4 +9,8 @@ router.get('/register', (req, res) => {
     res.render('register'); //   ./views/index.ejs를 불러와서 출력
 });
 
+router.get('/map', (req, res) => {
+    res.render('map');
+});
+
 module.exports = router;

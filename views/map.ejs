@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./header.ejs') %>
+    <h1>지도</h1>
+    <section id="search">
+      <input type="text" />
+      <button>주소입력</button>
+    </section>
+    <div id="map" style="width: 500px; height: 400px"></div>
+  </body>
+  <script
+    type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3effd89b87b08a12118c7ba3a30a51c8&libraries=services,clusterer,drawing"
+  ></script>
+  <script src="map.js"></script>
+</html>
